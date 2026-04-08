@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Future Tom
 description: Future Tom
 permalink: /
@@ -20,7 +20,8 @@ permalink: /
 <p class="kicker">Notes</p>
 <h1 class="page-title">Notes</h1>
 
-<div class="rule" aria-hidden="true"></div>
+
+<div class="rule" aria-hidden="true"></div> 
 -->
 
 <div class="notes-list">
