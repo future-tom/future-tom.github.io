@@ -1,7 +1,7 @@
 ---
 title: Future Tom
 description: A notebook of experiments
-permalink: FutureTom.com
+permalink: /
 ---
 
 <div class="ascii-wrap" aria-label="Future Tom ASCII art">
