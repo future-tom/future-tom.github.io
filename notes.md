@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Notes
-description: All notes
+title: All Notes
+description: All Notes
 permalink: /_notes/
 ---
 
