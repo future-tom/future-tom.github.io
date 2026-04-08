@@ -6,9 +6,19 @@ baseurl: ""
 markdown: kramdown
 theme: null
 
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default
+
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
