@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: Future Tom
 description: Future Tom
 permalink: /
 ---
