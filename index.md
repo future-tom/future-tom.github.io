@@ -17,13 +17,13 @@ permalink: /
 </pre>
 </div>
 </a>
-<!-- 
-<p class="kicker">Notes</p>
+
+<!-- <p class="kicker">Notes</p>
 <h1 class="page-title">Notes</h1>
 
-
 <div class="rule" aria-hidden="true"></div> 
--->
+ --> 
+
 
 <div class="notes-list">
   {% assign sorted_notes = site.notes | sort: "date" | reverse %}
