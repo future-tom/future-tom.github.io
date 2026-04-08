@@ -2,7 +2,7 @@
 layout: default
 title: Notes
 description: All notes
-permalink: /notes/
+permalink: /_notes/
 ---
 
 <div class="ascii-wrap" aria-label="Future Tom ASCII art">
