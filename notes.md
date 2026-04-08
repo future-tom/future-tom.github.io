@@ -16,8 +16,11 @@ permalink: /_notes/
 </pre>
 </div>
 
+<!-- 
 <p class="kicker">Notes</p>
 <h1 class="page-title">Notes</h1>
+-->
+
 <div class="rule" aria-hidden="true"></div>
 
 <div class="notes-list">
