@@ -1,6 +1,5 @@
 :root{
   --bg:#07090c;
-  --surface:#0b0e12;
   --text:#f3f2ee;
   --muted:#a7acb4;
   --body:#d7d9de;
@@ -123,6 +122,7 @@ body{
   letter-spacing:-.01em;
 }
 
+.home-links,
 .nav-links{
   margin-top:36px;
   display:flex;
@@ -130,6 +130,7 @@ body{
   flex-wrap:wrap;
 }
 
+.home-links a,
 .nav-links a{
   color:var(--text);
   text-decoration:none;
@@ -137,8 +138,51 @@ body{
   padding-bottom:2px;
 }
 
+.home-links a:hover,
 .nav-links a:hover{
   border-bottom-color:rgba(255,255,255,.5);
+}
+
+.notes-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  max-width:44rem;
+}
+
+.note-item{
+  padding:0 0 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.note-item:last-child{
+  border-bottom:none;
+}
+
+.note-item a{
+  color:var(--text);
+  text-decoration:none;
+}
+
+.note-item-title{
+  margin:0 0 6px;
+  font-size:24px;
+  line-height:1.2;
+  letter-spacing:-.03em;
+  font-weight:700;
+}
+
+.note-item-meta{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.note-item-desc{
+  margin:0;
+  color:var(--body);
+  font-size:16px;
+  line-height:1.6;
 }
 
 @media (max-width: 700px){
@@ -183,5 +227,9 @@ body{
   .prose p{
     font-size:17px;
     line-height:1.68;
+  }
+
+  .note-item-title{
+    font-size:20px;
   }
 }
