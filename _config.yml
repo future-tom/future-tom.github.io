@@ -1,0 +1,14 @@
+title: Future Tom
+description: A notebook of experiments
+url: "https://futuretom.com"
+baseurl: ""
+
+markdown: kramdown
+theme: null
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
