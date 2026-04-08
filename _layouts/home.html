@@ -16,6 +16,21 @@ layout: default
 <p class="subtitle">Notes</p>
 -->
 
+<div class="notes-list">
+  {% assign sorted_notes = site.notes | sort: "date" | reverse %}
+  {% for note in sorted_notes %}
+    <article class="note-item">
+      <a href="{{ note.url | relative_url }}">
+        <h2 class="note-item-title">{{ note.title }}</h2>
+      </a>
+      <p class="note-item-meta">{{ note.date | date: "%B %Y" }}{% if note.read_time %} · {{ note.read_time }} min read{% endif %}</p>
+      {% if note.description %}
+        <p class="note-item-desc">{{ note.description }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
+
 {% assign latest_note = site.notes | sort: "date" | reverse | first %}
 
 {% if latest_note %}
