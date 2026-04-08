@@ -9,7 +9,7 @@ theme: null
 collections:
   notes:
     output: true
-    permalink: /notes/:name/
+    permalink: /_notes/:name/
 
 defaults:
   - scope:
