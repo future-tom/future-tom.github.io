@@ -3,49 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Future Tom</title>
+  <title>FutureTom.com</title>
+  <meta name="description" content="Future Tom is an experiment in using an AI version of my idealized future self to close the gap between knowing and doing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#07090c;
-      --text:#f3f2ee;
-      --edge:rgba(255,255,255,.13);
-      --edge-soft:rgba(255,255,255,.05);
+      --bg-2:#0b1016;
+      --text:#f4f1ea;
+      --muted:rgba(244,241,234,.78);
+      --accent:#59c7c0;
+      --page:760px;
+      --measure:690px;
     }
 
-    *{
-      box-sizing:border-box;
-    }
+    *{ box-sizing:border-box; }
 
     html, body{
       margin:0;
-      width:100%;
       min-height:100%;
-      background:var(--bg);
+      background:linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 42%, #050608 100%);
       color:var(--text);
     }
 
     body{
       min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      position:relative;
-      overflow:auto;
-      font-family:"Courier New", Courier, monospace;
+      padding:28px 18px 40px;
+      font-family:"Space Grotesk", sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
 
-    /* subtle sticky border hugging the viewport edges */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:10px;
-      border:1px solid var(--edge);
-      border-radius:18px;
-      pointer-events:none;
-      box-shadow:
-        inset 0 1px 0 var(--edge-soft),
-        0 0 0 1px rgba(255,255,255,.015);
+    .page{
+      width:min(100%, var(--page));
+      margin:0 auto;
+    }
+
+    .hero{
+      display:flex;
+      justify-content:center;
+      margin:44px 0 68px;
     }
 
     .ascii-wrap{
@@ -56,40 +55,110 @@
       scrollbar-width:none;
     }
 
-    .ascii-wrap::-webkit-scrollbar{
-      display:none;
-    }
+    .ascii-wrap::-webkit-scrollbar{ display:none; }
 
     pre{
       margin:0;
       min-width:max-content;
       text-align:center;
-      font-size:clamp(8px, 1vw, 18px);
-      line-height:.84;
-      letter-spacing:0;
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:clamp(4px, 0.88vw, 10px);
+      line-height:.88;
       font-weight:700;
+      color:var(--text);
+      text-shadow:1px 0 0 rgba(255,255,255,.03);
+    }
+
+    main{
+      width:min(100%, var(--measure));
+      margin:0 auto;
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(23px, 4vw, 38px);
+      line-height:1.06;
+      letter-spacing:-0.04em;
+      font-weight:700;
+      color:var(--accent);
+      text-wrap:pretty;
+    }
+
+    .prose{
+      font-size:16px;
+      line-height:1.76;
+      color:var(--muted);
+    }
+
+    .prose p{
+      margin:0 0 18px;
+    }
+
+    .prose p:last-child{
+      margin-bottom:0;
+    }
+
+    .prose strong,
+    .prose em{
       color:var(--text);
     }
 
-    @media (max-width: 700px){
+    .prose strong{ font-weight:700; }
+    .prose em{ font-style:italic; }
+
+    @media (min-width: 721px){
       body{
-        padding:16px;
+        padding:40px 28px 56px;
       }
 
-      body::before{
-        inset:6px;
-        border-radius:14px;
+      .hero{
+        margin:58px 0 78px;
+      }
+
+      .prose{
+        font-size:17px;
+        line-height:1.82;
+      }
+
+      .prose p{
+        margin-bottom:20px;
+      }
+    }
+
+    @media (max-width: 720px){
+      body{
+        padding:28px 28px 40px;
+      }
+
+      .hero{
+        margin:40px 0 58px;
       }
 
       pre{
-        font-size:clamp(5px, 1.7vw, 8px);
-        line-height:.86;
+        font-size:clamp(4px, 1.15vw, 6px);
+      }
+
+      h1{
+        font-size:clamp(20px, 5.8vw, 26px);
+        line-height:1.1;
+        letter-spacing:-0.03em;
+      }
+
+      .prose{
+        font-size:15px;
+        line-height:1.72;
+      }
+
+      .prose p{
+        margin-bottom:16px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="ascii-wrap" aria-label="Future Tom ASCII art">
+  <div class="page">
+    <section class="hero" aria-label="Future Tom header">
+      <div class="ascii-wrap" aria-label="Future Tom">
 <pre>
 ███████╗██╗   ██╗████████╗██╗   ██╗██████╗ ███████╗    ████████╗ ██████╗ ███╗   ███╗
 ██╔════╝██║   ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝    ╚══██╔══╝██╔═══██╗████╗ ████║
@@ -98,6 +167,42 @@
 ██║     ╚██████╔╝   ██║   ╚██████╔╝██║  ██║███████╗       ██║   ╚██████╔╝██║ ╚═╝ ██║
 ╚═╝      ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝       ╚═╝    ╚═════╝ ╚═╝     ╚═╝
 </pre>
+      </div>
+    </section>
+
+    <main>
+      <h1>I built an AI version of my future self to tell me what to do.</h1>
+
+      <div class="prose">
+        <p>At work, I am generally good at creating clarity and driving things forward. In my personal life, not so much.</p>
+
+        <p>I couldn’t ignore the pattern: things that should take two minutes to accomplish were staying unresolved for months. I was spending hours <em>thinking</em> about unfinished tasks, but not actually <em>doing</em> them.</p>
+
+        <p>Which is a problem, because it’s hard to be present when your mind is always occupied by all the things you haven’t done yet. It’s also exhausting.</p>
+
+        <p>I already know the habits I need to improve. I already know the kind of person I want to be. What was missing was a disciplined system to bridge the gap between <em>knowing</em> and <em>doing</em>.</p>
+
+        <p>So I built Future Tom.</p>
+
+        <p><strong>Future Tom is the product of a semi-unhinged late-night vibe coding experiment: an AI version of my idealized future self, loaded with the context of current me.</strong></p>
+
+        <p>He has one job: tell me <em>exactly</em> what to do next.</p>
+
+        <p>Each morning, Future Tom gives me instructions for the day. I try to follow them. Then I write about what happened.</p>
+
+        <p>I expect many mistakes. I’m hoping for a few genuine wins. But mostly I just want to learn what works and apply it to my life.</p>
+
+        <p>Can Future Tom help me become more present, more consistent, and more aligned with the kind of person I want to be? Can he help me become a better husband, parent, friend, and colleague?</p>
+
+	<p><strong>And what happens if this experiment actually works?</strong></p>
+
+        <p>Future Tom is evolving.</p>
+
+        <p>Hopefully, so will I.</p>
+
+        <p><br><br><em><span style="font-size:0.75em;">Follow along to see if Future Tom can help current me do better. Launching July 2026.</span></em></p>
+      </div>
+    </main>
   </div>
 </body>
 </html>
